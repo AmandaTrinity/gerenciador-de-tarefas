@@ -6,20 +6,20 @@ function App() {
   const [tasks, setTasks] = useState([{
 
     id: 1,
-    title: 'Estudar programação',
-    description: 'Estudar linguagem React',
+    title: 'Study programming',
+    description: 'Study React language',
     isCompleted: true,
   },
   {
     id: 2,
-    title: 'Ir ao shopping',
-    description: 'Comprar blusa vermelha',
+    title: 'Go shopping',
+    description: 'Buy a red shirt',
     isCompleted: false,
   },
   {
     id: 3,
-    title: 'Ir ao supermercado',
-    description: 'Comprar laranja',
+    title: 'Go to the supermarket',
+    description: 'Buy oranges',
     isCompleted: false,
   },
   ]);
@@ -40,9 +40,9 @@ function App() {
     setTasks(newTasks);
   }
    return (
-    <div className="w-screen h-screen bg-purple-400 flex justify-center p-6">
+    <div className="w-screen h-screen bg-purple-900 flex justify-center p-6">
       <div className="w-[500px]">
-        <h1 className="text-3xl text-white-800 font-bold text-center">Gerenciador de Tarefas</h1>
+        <h1 className="text-3xl text-slate-100 font-bold text-center">Task Manager</h1>
         <AddTask/>
         <Tasks
           tasks={tasks}
