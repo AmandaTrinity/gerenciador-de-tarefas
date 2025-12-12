@@ -4,7 +4,6 @@ import Tasks from "./components/Tasks";
 
 function App() {
   const [tasks, setTasks] = useState([{
-
     id: 1,
     title: 'Study programming',
     description: 'Study React language',
@@ -39,11 +38,23 @@ function App() {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
   }
+  
+  function onAddTask(title) {
+    const newTask = {
+        id: Date.now(),
+        title: title,
+        description: '', 
+        isCompleted: false,
+    };
+    // Adiciona a nova tarefa no final da lista
+    setTasks(prevTasks => [...prevTasks, newTask]);
+  }
+
    return (
     <div className="w-screen h-screen bg-purple-900 flex justify-center p-6">
       <div className="w-[500px]">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Task Manager</h1>
-        <AddTask/>
+        <AddTask onAddTask={onAddTask} /> 
         <Tasks
           tasks={tasks}
           onTaskClick={onTaskClick}
@@ -53,4 +64,4 @@ function App() {
     </div>
   );
 }
-export default App 
+export default App
