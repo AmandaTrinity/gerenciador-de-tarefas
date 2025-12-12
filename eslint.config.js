@@ -36,4 +36,4 @@ export default [
       'react/props-types': 'off',
     },
   },
-]
+];
