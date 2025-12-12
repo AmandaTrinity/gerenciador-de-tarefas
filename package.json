@@ -8,8 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write",
-    "check:format": "prettier --check"
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "lucide-react": "^0.435.0",
